@@ -16,7 +16,7 @@ t_d_list* create_empty_list(int max_level) {
 
 void insert_cell(t_d_list* list, t_d_cell* cell) {
     // Gestion des cas d'entrée invalide
-    if (list == NULL || cell == NULL || cell->levels > list->max_level) {
+    if (list == NULL || cell == NULL || cell->levels >= list->max_level) {
         return;
     }
     cell->next = list->heads[0];
@@ -28,7 +28,7 @@ void insert_cell(t_d_list* list, t_d_cell* cell) {
 
 void insert_sorted_cell(t_d_list* list, t_d_cell* cell) {
     // Gestion des cas d'entrée invalide
-    if (list == NULL || cell == NULL || cell->levels > list->max_level) {
+    if (list == NULL || cell == NULL || cell->levels >= list->max_level) {
         return;
     }
 
